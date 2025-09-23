@@ -1,0 +1,17 @@
+Rhys Markham
+CSC 330 - Software Development
+Homework Assignment 2
+References and Collaboration Statement
+
+Collaboration:
+I did not collaborate with anyone while working on this assignment.
+
+Sources:
+-I used ChatGPT heavily to help fix the original code we worked on in class when I got really stuck or needed concept explanation, 
+but the implementation of the assignment was done by me.
+
+-W3schools
+  -https://www.w3schools.com/nodejs/nodejs_async.asp (Async Programming)
+  -https://www.w3schools.com/nodejs/nodejs_error_handling.asp (Error Handling)
+  -https://www.w3schools.com/nodejs/nodejs_http.asp (HTTP Module)
+  -https://www.w3schools.com/nodejs/nodejs_architecture.asp (Node Architecture)
