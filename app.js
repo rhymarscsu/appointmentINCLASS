@@ -87,8 +87,26 @@ function cancel(queryObj, res){
 
 
 function check(queryObj, res){
-    res.end("placeholder");
+    if(queryObj.day == undefined || queryObj.time == undefined){
+        res.end("missing query parameters")
+        return
+    }
+
+    var available = false
+    for(var i = 0; i < availableTimes[queryObj.day].length; i++){
+        if(availableTimes[queryObj.day][i] == queryObj.time){
+            available = true
+            break
+        }
+    }
+
+    if(available == true){
+        res.end("available")
+    } else {
+        res.end("not available")
+    }
 }
+
 
 serverObj.listen(80, function(){
     console.log("server running");
