@@ -57,8 +57,34 @@ function schedule(queryObj, res) {
 }
 
 function cancel(queryObj, res){
-    res.end("placeholder");
+    if(queryObj.name == undefined || queryObj.day == undefined || queryObj.time == undefined){
+        res.end("missing query parameters")
+        return
+    }
+
+    var found = false
+    for(var i = 0; i < appointments.length; i++){
+        if(appointments[i].name == queryObj.name &&
+           appointments[i].day == queryObj.day &&
+           appointments[i].time == queryObj.time){
+
+            // remove the appointment
+            appointments.splice(i, 1)
+
+            // put time back to availableTimes
+            availableTimes[queryObj.day].push(queryObj.time)
+
+            res.end("Appointment has been canceled")
+            found = true
+            break
+        }
+    }
+
+    if(found == false){
+        res.end("Appointment not found")
+    }
 }
+
 
 function check(queryObj, res){
     res.end("placeholder");
