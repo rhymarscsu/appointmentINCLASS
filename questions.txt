@@ -1,0 +1,3 @@
+The symbol .. refers to the parent directory of the current directory, allowing you to access files or folders one level up. 
+The option -R stands for recursive and is used with commands like cp or mv to copy or move a folder along with all of its contents.
+For example, the command cp -R ../public_html . copies the folder public_html from the parent directory into the current directory, with . representing the current location.
